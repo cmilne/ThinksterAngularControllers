@@ -2,10 +2,19 @@
 
 angular.module('app', []);
 
-angular.module('app').controller('MainCtrl', function($scope) {
-	$scope.message = 'hello';
+angular.module('app').controller('MainCtrl', function() {
+	this.message = 'hello2';
+	this.title = 'MainCtrl Title';
 
-	$scope.updateMessage = function(message) {
-		$scope.message = message;
+	this.updateMessage = function(message) {
+		this.message = message;
 	};
+});
+
+angular.module('app').controller('AnotherCtrl', function() {
+	this.title = 'AnotherCtrl Title';
+});
+
+angular.module('app').controller('YetAnotherCtrl', function() {
+	this.title = 'YetAnotherCtrl Title';
 });
